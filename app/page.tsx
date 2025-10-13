@@ -19,7 +19,7 @@ export default function HomePage() {
           src="/happy-poodle-family-in-sunny-garden.jpg"
           alt="Happy poodles"
           fill
-          className="object-cover opacity-30"
+          className="object-cover opacity-20"
           priority
         />
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
@@ -31,11 +31,11 @@ export default function HomePage() {
             puppies and matching them with loving families.
           </p>
           <div className="flex flex-wrap gap-4 justify-center animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300">
+            <Button asChild size="lg" variant="secondary" className="rounded-full">
+              <Link href="/contact">Reserve Now</Link>
+            </Button>
             <Button asChild size="lg" className="rounded-full">
               <Link href="/available-puppies">Meet the Puppies</Link>
-            </Button>
-            <Button asChild size="lg" variant="outline" className="rounded-full bg-transparent">
-              <Link href="/contact">Reserve Now</Link>
             </Button>
             <Button asChild size="lg" variant="secondary" className="rounded-full">
               <Link href="/contact">Contact Us</Link>

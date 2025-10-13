@@ -30,14 +30,14 @@ export default function HomePage() {
             Where compassion meets excellence in ethical poodle breeding. We're dedicated to raising healthy, happy
             puppies and matching them with loving families.
           </p>
-          <div className="flex flex-wrap gap-4 justify-center animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300">
-            <Button asChild size="lg" variant="secondary" className="rounded-full">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300">
+            <Button asChild size="lg" variant="secondary" className="rounded-full w-full sm:w-auto">
               <Link href="/contact">Reserve Now</Link>
             </Button>
-            <Button asChild size="lg" className="rounded-full">
+            <Button asChild size="lg" className="rounded-full w-full sm:w-auto">
               <Link href="/available-puppies">Meet the Puppies</Link>
             </Button>
-            <Button asChild size="lg" variant="secondary" className="rounded-full">
+            <Button asChild size="lg" variant="secondary" className="rounded-full w-full sm:w-auto">
               <Link href="/contact">Contact Us</Link>
             </Button>
           </div>
@@ -150,11 +150,11 @@ export default function HomePage() {
           <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
             Explore our available puppies or get in touch to learn more about upcoming litters and our adoption process.
           </p>
-          <div className="flex flex-wrap gap-4 justify-center">
-            <Button asChild size="lg" className="rounded-full">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button asChild size="lg" className="rounded-full w-full sm:w-auto">
               <Link href="/available-puppies">View Available Puppies</Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="rounded-full bg-transparent">
+            <Button asChild size="lg" variant="outline" className="rounded-full bg-transparent w-full sm:w-auto">
               <Link href="/contact">Get in Touch</Link>
             </Button>
           </div>

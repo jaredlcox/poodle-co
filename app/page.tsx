@@ -19,7 +19,7 @@ export default function HomePage() {
           src="/happy-poodle-family-in-sunny-garden.jpg"
           alt="Happy poodles"
           fill
-          className="object-cover opacity-30"
+          className="object-cover opacity-20"
           priority
         />
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">

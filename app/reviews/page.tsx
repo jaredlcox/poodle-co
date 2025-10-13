@@ -10,7 +10,7 @@ const reviews = [
     location: "Portland, OR",
     rating: 5,
     text: "We couldn't be happier with our puppy from Poodle & Co. The entire process was professional, caring, and transparent. Our little one is healthy, happy, and has the sweetest temperament!",
-    image: "/placeholder.svg?height=400&width=400",
+    image: "/cream-poodle-female.jpg?height=400&width=400",
   },
   {
     name: "Jennifer L.",
@@ -63,7 +63,7 @@ export default function ReviewsPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {reviews.map((review, index) => (
-              <Card key={index} className="border-none shadow-sm bg-card/50 overflow-hidden">
+              <Card key={index} className="border-none shadow-sm bg-card/50 overflow-hidden pt-0">
                 <div className="relative aspect-square overflow-hidden">
                   <Image src={review.image || "/placeholder.svg"} alt={review.name} fill className="object-cover" />
                 </div>

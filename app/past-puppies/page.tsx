@@ -22,12 +22,12 @@ export default function PastPuppiesPage() {
             See our beautiful puppies from previous litters, both as adorable babies and grown into stunning adults
           </p>
 
-          <div className="flex justify-center gap-4 mb-12">
+          <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">
             <Button
               variant={activeTab === "puppies" ? "default" : "outline"}
               size="lg"
               onClick={() => setActiveTab("puppies")}
-              className="rounded-full"
+              className="rounded-full w-full sm:w-auto"
             >
               As Puppies
             </Button>
@@ -35,7 +35,7 @@ export default function PastPuppiesPage() {
               variant={activeTab === "adults" ? "default" : "outline"}
               size="lg"
               onClick={() => setActiveTab("adults")}
-              className="rounded-full"
+              className="rounded-full w-full sm:w-auto"
             >
               As Adults
             </Button>

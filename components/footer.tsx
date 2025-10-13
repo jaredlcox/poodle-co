@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Facebook, Instagram, Mail, Phone } from "lucide-react"
+import { Facebook, Instagram, Mail } from "lucide-react"
 
 export function Footer() {
   return (
@@ -38,7 +38,7 @@ export function Footer() {
             <h4 className="font-semibold mb-4">Connect With Us</h4>
             <div className="flex gap-4 mb-4">
               <a
-                href="https://instagram.com"
+                href="https://instagram.com/poodle_and_co"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors"
@@ -46,7 +46,7 @@ export function Footer() {
                 <Instagram className="h-5 w-5" />
               </a>
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/profile.php?id=100090026601586"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors"
@@ -54,19 +54,16 @@ export function Footer() {
                 <Facebook className="h-5 w-5" />
               </a>
               <a
-                href="mailto:hello@poodleandco.com"
+                href="mailto:poodleco1@gmail.com"
                 className="text-muted-foreground hover:text-primary transition-colors"
               >
                 <Mail className="h-5 w-5" />
               </a>
-              <a href="tel:+1234567890" className="text-muted-foreground hover:text-primary transition-colors">
-                <Phone className="h-5 w-5" />
-              </a>
             </div>
             <p className="text-sm text-muted-foreground">
-              Email: hello@poodleandco.com
+              Email: poodleco1@gmail.com
               <br />
-              Phone: (123) 456-7890
+              Fayetteville, NC & Toledo, OH
             </p>
           </div>
         </div>

@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Card, CardContent } from "@/components/ui/card"
-import { Mail, Phone, MapPin, Facebook, Instagram } from "lucide-react"
+import { Mail, MapPin, Facebook, Instagram } from "lucide-react"
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -141,29 +141,10 @@ export default function ContactPage() {
                       <div>
                         <h3 className="font-semibold mb-1">Email</h3>
                         <a
-                          href="mailto:hello@poodleandco.com"
+                          href="mailto:poodleco1@gmail.com"
                           className="text-muted-foreground hover:text-primary transition-colors"
                         >
-                          hello@poodleandco.com
-                        </a>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                <Card className="border-none shadow-sm bg-card/50">
-                  <CardContent className="pt-6">
-                    <div className="flex items-start gap-4">
-                      <div className="w-10 h-10 bg-secondary/20 rounded-full flex items-center justify-center flex-shrink-0">
-                        <Phone className="h-5 w-5 text-secondary-foreground" />
-                      </div>
-                      <div>
-                        <h3 className="font-semibold mb-1">Phone</h3>
-                        <a
-                          href="tel:+1234567890"
-                          className="text-muted-foreground hover:text-primary transition-colors"
-                        >
-                          (123) 456-7890
+                          poodleco1@gmail.com
                         </a>
                       </div>
                     </div>
@@ -179,7 +160,7 @@ export default function ContactPage() {
                       <div>
                         <h3 className="font-semibold mb-1">Location</h3>
                         <p className="text-muted-foreground">
-                          Pacific Northwest, USA
+                          Fayetteville, NC & Toledo, OH
                           <br />
                           <span className="text-sm">Visits by appointment only</span>
                         </p>
@@ -193,7 +174,7 @@ export default function ContactPage() {
                 <h3 className="font-semibold mb-4">Follow Us</h3>
                 <div className="flex gap-4">
                   <a
-                    href="https://instagram.com"
+                    href="https://instagram.com/poodle_and_co"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center hover:bg-primary/20 transition-colors"
@@ -201,7 +182,7 @@ export default function ContactPage() {
                     <Instagram className="h-5 w-5 text-primary" />
                   </a>
                   <a
-                    href="https://facebook.com"
+                    href="https://www.facebook.com/profile.php?id=100090026601586"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center hover:bg-primary/20 transition-colors"

@@ -1,0 +1,32 @@
+===============================================
+CONTACT FORM - QUICK SETUP
+===============================================
+
+1. Create a file named: .env.local
+   (in the root folder, next to package.json)
+
+2. Add this line to the file:
+   RESEND_API_KEY=your_actual_api_key_here
+
+3. Get your API key:
+   - Go to https://resend.com
+   - Sign up (it's free!)
+   - Go to API Keys
+   - Create a new key
+   - Copy and paste it in .env.local
+
+4. Restart your dev server:
+   npm run dev
+
+5. Test the form on your contact page!
+
+Emails will be sent to: poodleco1@gmail.com
+
+⚠️  IMPORTANT FOR PRODUCTION:
+.env.local only works locally!
+For production (live site), add RESEND_API_KEY 
+to your hosting platform's environment variables.
+
+Full instructions: See CONTACT_FORM_SETUP.md
+===============================================
+

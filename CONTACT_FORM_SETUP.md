@@ -97,6 +97,38 @@ Example:
 from: 'Poodle & Co. <contact@yourdomain.com>'
 ```
 
+## Production Deployment
+
+**Important:** `.env.local` only works locally. For production, you must add the environment variable to your hosting platform.
+
+### Vercel (Recommended for Next.js)
+
+1. Go to your project at [vercel.com](https://vercel.com)
+2. Navigate to: **Settings** → **Environment Variables**
+3. Add variable:
+   - **Name**: `RESEND_API_KEY`
+   - **Value**: Your Resend API key
+   - **Environment**: Production (and optionally Preview/Development)
+4. Click **Save**
+5. **Important**: Redeploy your site for the changes to take effect
+
+### Netlify
+
+1. Go to: **Site Settings** → **Build & Deploy** → **Environment**
+2. Click **Add Variable**
+3. Add:
+   - **Key**: `RESEND_API_KEY`
+   - **Value**: Your Resend API key
+4. Click **Save**
+5. Redeploy your site
+
+### Other Hosting Platforms
+
+Look for "Environment Variables", "Secrets", or "Config Vars" in your hosting dashboard and add:
+- `RESEND_API_KEY` = your API key
+
+**Note:** `.env.local` is in `.gitignore` and will never be deployed (this is correct for security).
+
 ## Support
 
 If you have issues:

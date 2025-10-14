@@ -22,6 +22,11 @@ CONTACT FORM - QUICK SETUP
 
 Emails will be sent to: poodleco1@gmail.com
 
+⚠️  IMPORTANT FOR PRODUCTION:
+.env.local only works locally!
+For production (live site), add RESEND_API_KEY 
+to your hosting platform's environment variables.
+
 Full instructions: See CONTACT_FORM_SETUP.md
 ===============================================
 

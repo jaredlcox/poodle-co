@@ -19,11 +19,41 @@ export default function ContactPage() {
     phone: "",
     message: "",
   })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle")
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission
-    console.log("Form submitted:", formData)
+    setIsSubmitting(true)
+    setSubmitStatus("idle")
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      })
+
+      if (response.ok) {
+        setSubmitStatus("success")
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          phone: "",
+          message: "",
+        })
+      } else {
+        setSubmitStatus("error")
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error)
+      setSubmitStatus("error")
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -123,8 +153,22 @@ export default function ContactPage() {
                   />
                 </div>
 
-                <Button type="submit" size="lg" className="w-full rounded-full">
-                  Send Message
+                {submitStatus === "success" && (
+                  <div className="p-4 bg-green-50 border border-green-200 rounded-lg text-green-800">
+                    <p className="font-semibold">Message sent successfully!</p>
+                    <p className="text-sm">We'll get back to you as soon as possible.</p>
+                  </div>
+                )}
+
+                {submitStatus === "error" && (
+                  <div className="p-4 bg-red-50 border border-red-200 rounded-lg text-red-800">
+                    <p className="font-semibold">Failed to send message</p>
+                    <p className="text-sm">Please try again or email us directly at poodleco1@gmail.com</p>
+                  </div>
+                )}
+
+                <Button type="submit" size="lg" className="w-full rounded-full" disabled={isSubmitting}>
+                  {isSubmitting ? "Sending..." : "Send Message"}
                 </Button>
               </form>
             </div>

@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { Facebook, Instagram, Mail } from "lucide-react"
+import data from "@/data/data.json"
 
 export function Footer() {
   return (
@@ -7,30 +8,24 @@ export function Footer() {
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div>
-            <h3 className="text-xl font-serif font-bold mb-4">Poodle & Co.</h3>
+            <h3 className="text-xl font-serif font-bold mb-4">{data.site.name}</h3>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Dedicated to ethical breeding practices and finding loving homes for our beautiful poodles.
+              {data.footer.description}
             </p>
           </div>
 
           <div>
             <h4 className="font-semibold mb-4">Quick Links</h4>
             <div className="flex flex-col gap-2">
-              <Link href="/who-we-are" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                Who We Are
-              </Link>
-              <Link href="/our-dogs" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                Our Dogs
-              </Link>
-              <Link
-                href="/available-puppies"
-                className="text-sm text-muted-foreground hover:text-primary transition-colors"
-              >
-                Available Puppies
-              </Link>
-              <Link href="/contact" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                Contact Us
-              </Link>
+              {data.footer.quickLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
+                  {link.label}
+                </Link>
+              ))}
             </div>
           </div>
 
@@ -38,7 +33,7 @@ export function Footer() {
             <h4 className="font-semibold mb-4">Connect With Us</h4>
             <div className="flex gap-4 mb-4">
               <a
-                href="https://instagram.com/poodle_and_co"
+                href={data.footer.social.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors"
@@ -46,7 +41,7 @@ export function Footer() {
                 <Instagram className="h-5 w-5" />
               </a>
               <a
-                href="https://www.facebook.com/profile.php?id=100090026601586"
+                href={data.footer.social.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors"
@@ -54,22 +49,22 @@ export function Footer() {
                 <Facebook className="h-5 w-5" />
               </a>
               <a
-                href="mailto:poodleco1@gmail.com"
+                href={`mailto:${data.footer.contact.email}`}
                 className="text-muted-foreground hover:text-primary transition-colors"
               >
                 <Mail className="h-5 w-5" />
               </a>
             </div>
             <p className="text-sm text-muted-foreground">
-              Email: poodleco1@gmail.com
+              Email: {data.footer.contact.email}
               <br />
-              Fayetteville, NC & Toledo, OH
+              {data.footer.contact.locations}
             </p>
           </div>
         </div>
 
         <div className="border-t border-border pt-8 text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} Poodle & Co. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} {data.site.name}. All rights reserved.</p>
         </div>
       </div>
     </footer>

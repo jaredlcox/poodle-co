@@ -5,11 +5,12 @@ import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
+import data from "@/data/data.json"
 
 export default function PastPuppiesPage() {
   const [activeTab, setActiveTab] = useState<"puppies" | "adults">("puppies")
 
-  const puppyImages = Array.from({ length: 12 }, (_, i) => i + 1)
+  const pastPuppies = data.pastPuppies.puppies
 
   return (
     <div className="min-h-screen">
@@ -17,9 +18,9 @@ export default function PastPuppiesPage() {
 
       <div className="pt-32 pb-20 px-4">
         <div className="container mx-auto">
-          <h1 className="text-5xl md:text-6xl font-serif font-bold mb-6 text-center">Past Puppies</h1>
+          <h1 className="text-5xl md:text-6xl font-serif font-bold mb-6 text-center">{data.pastPuppies.title}</h1>
           <p className="text-xl text-muted-foreground text-center mb-12 max-w-3xl mx-auto leading-relaxed">
-            See our beautiful puppies from previous litters, both as adorable babies and grown into stunning adults
+            {data.pastPuppies.description}
           </p>
 
           <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">
@@ -42,20 +43,21 @@ export default function PastPuppiesPage() {
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {puppyImages.map((i) => (
-              <div key={i} className="relative aspect-square rounded-xl overflow-hidden group cursor-pointer">
+            {pastPuppies.map((puppy) => (
+              <div key={puppy.id} className="relative aspect-square rounded-xl overflow-hidden group cursor-pointer bg-muted/20">
                 <Image
-                  src={`/.jpg?height=400&width=400&query=${
-                    activeTab === "puppies" ? "cute poodle puppy" : "adult poodle"
-                  } ${i}`}
-                  alt={`${activeTab === "puppies" ? "Puppy" : "Adult"} ${i}`}
+                  src={activeTab === "puppies" ? puppy.puppyImage : puppy.adultImage}
+                  alt={`${puppy.name} - ${activeTab === "puppies" ? "Puppy" : "Adult"}`}
                   fill
-                  className="object-cover transition-transform duration-300 group-hover:scale-110"
+                  className="object-cover transition-transform duration-300 group-hover:scale-3d"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                  <p className="text-white font-medium text-sm">
-                    {activeTab === "puppies" ? "8 weeks old" : "2 years old"}
-                  </p>
+                  <div className="text-white">
+                    <p className="font-semibold text-sm">{puppy.name}</p>
+                    <p className="text-xs">
+                      {activeTab === "puppies" ? puppy.puppyAge : puppy.adultAge}
+                    </p>
+                  </div>
                 </div>
               </div>
             ))}

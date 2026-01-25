@@ -4,17 +4,9 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import data from "@/data/data.json"
 
-const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "/who-we-are", label: "Who We Are" },
-  { href: "/our-dogs", label: "Our Dogs" },
-  { href: "/past-puppies", label: "Past Puppies" },
-  { href: "/upcoming-litters", label: "Upcoming Litters" },
-  { href: "/available-puppies", label: "Available Puppies" },
-  { href: "/reviews", label: "Customer Reviews" },
-  { href: "/contact", label: "Contact Us" },
-]
+const navLinks = data.site.navigation
 
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -37,7 +29,7 @@ export function Navigation() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           <Link href="/" className="text-2xl font-serif font-bold text-foreground">
-            Poodle & Co.
+            {data.site.name}
           </Link>
 
           {/* Desktop Navigation */}

@@ -1,0 +1,98 @@
+╔═══════════════════════════════════════════════════════════╗
+║       POODLE & CO. - CENTRALIZED DATA QUICK START        ║
+╚═══════════════════════════════════════════════════════════╝
+
+📁 DATA FILE LOCATION
+└─ data/data.json
+
+✅ WHAT'S BEEN UPDATED (ALREADY WORKING!)
+├─ Navigation (all links + site name)
+├─ Footer (links, email, social, locations)
+├─ Photo Carousel (gallery images)
+├─ Reviews Page (all reviews + content)
+└─ Past Puppies Page (puppy & adult photos)
+
+🎯 COMMON UPDATES
+
+1. CHANGE EMAIL
+   Location in data.json:
+   ├─ "contact" → "email"
+   └─ "footer" → "contact" → "email"
+
+2. UPDATE SOCIAL MEDIA
+   Location in data.json:
+   ├─ "contact" → "social"
+   └─ "footer" → "social"
+
+3. ADD A REVIEW
+   Location in data.json:
+   └─ "reviews" → "reviews" (add to array)
+
+4. UPDATE NAVIGATION
+   Location in data.json:
+   └─ "site" → "navigation" (edit array)
+
+5. CHANGE LOCATIONS
+   Location in data.json:
+   ├─ "contact" → "locations"
+   └─ "footer" → "contact" → "locations"
+
+6. UPDATE GALLERY PHOTOS
+   Location in data.json:
+   └─ "home" → "gallery" → "photos"
+
+7. UPDATE PAST PUPPIES
+   Location in data.json:
+   └─ "pastPuppies" → "puppies" (add to array)
+   Note: Each puppy needs puppyImage & adultImage
+
+📚 DOCUMENTATION FILES
+
+├─ DATA_MANAGEMENT_GUIDE.md
+│  └─ Complete guide with examples
+│
+├─ CENTRALIZED_DATA_SUMMARY.md
+│  └─ Technical overview & what's done
+│
+├─ EXAMPLE_USAGE.md
+│  └─ Before/After code examples
+│
+└─ QUICK_START.txt (this file)
+   └─ Quick reference
+
+💡 HOW TO UPDATE
+
+1. Open: data/data.json
+2. Find the section you want to change
+3. Edit the text or path
+4. Save the file
+5. Changes appear automatically!
+
+⚠️ IMPORTANT TIPS
+
+✓ Use valid JSON syntax
+✓ Keep all text in "quotes"
+✓ Use commas between array items
+✓ Image paths start with / (e.g., "/image.jpg")
+✓ Test locally before deploying
+
+🔍 JSON VALIDATION
+
+Before deploying, validate at:
+└─ jsonlint.com
+
+OR check in your code editor for errors
+
+📧 CURRENT CONTACT INFO
+
+Email: poodleco1@gmail.com
+Locations: Fayetteville, NC & Toledo, OH
+Instagram: @poodle_and_co
+Facebook: facebook.com/profile.php?id=100090026601586
+
+═══════════════════════════════════════════════════════════
+
+Need more help? See DATA_MANAGEMENT_GUIDE.md
+
+═══════════════════════════════════════════════════════════
+

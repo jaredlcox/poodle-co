@@ -1,0 +1,409 @@
+{
+  "site": {
+    "name": "Poodle & Co.",
+    "tagline": "Ethical Poodle Breeding",
+    "navigation": [
+      { "href": "/", "label": "Home" },
+      { "href": "/who-we-are", "label": "Who We Are" },
+      { "href": "/our-dogs", "label": "Our Dogs" },
+      { "href": "/past-puppies", "label": "Past Puppies" },
+      { "href": "/upcoming-litters", "label": "Upcoming Litters" },
+      { "href": "/available-puppies", "label": "Available Puppies" },
+      { "href": "/reviews", "label": "Customer Reviews" },
+      { "href": "/contact", "label": "Contact Us" }
+    ]
+  },
+  "home": {
+    "hero": {
+      "image": "/happy-poodle-family-in-sunny-garden.jpg",
+      "title": "Welcome to Poodle & Co.",
+      "description": "Where compassion meets excellence in ethical poodle breeding. We're dedicated to raising healthy, happy puppies and matching them with loving families.",
+      "buttons": [
+        { "text": "Reserve Now", "href": "/contact", "variant": "secondary" },
+        { "text": "Meet the Puppies", "href": "/available-puppies", "variant": "primary" },
+        { "text": "Contact Us", "href": "/contact", "variant": "secondary" }
+      ]
+    },
+    "values": {
+      "title": "Our Commitment to Excellence",
+      "items": [
+        {
+          "icon": "Heart",
+          "title": "Ethical Breeding",
+          "description": "We prioritize the health and well-being of our dogs above all else, following the highest ethical standards."
+        },
+        {
+          "icon": "Shield",
+          "title": "Health Guarantee",
+          "description": "All our puppies come with comprehensive health testing and a lifetime of support for their families."
+        },
+        {
+          "icon": "Home",
+          "title": "Loving Homes",
+          "description": "We carefully match each puppy with the perfect family to ensure a lifetime of happiness together."
+        }
+      ]
+    },
+    "gallery": {
+      "title": "Happy Families",
+      "description": "See the joy our puppies bring to their forever homes",
+      "photos": [
+        { "id": 1, "image": "/happy-poodle-with-owner-.jpg", "alt": "Happy poodle family 1" },
+        { "id": 2, "image": "/happy-poodle-with-owner-.jpg", "alt": "Happy poodle family 2" },
+        { "id": 3, "image": "/happy-poodle-with-owner-.jpg", "alt": "Happy poodle family 3" },
+        { "id": 4, "image": "/happy-poodle-with-owner-.jpg", "alt": "Happy poodle family 4" },
+        { "id": 5, "image": "/happy-poodle-with-owner-.jpg", "alt": "Happy poodle family 5" },
+        { "id": 6, "image": "/happy-poodle-with-owner-.jpg", "alt": "Happy poodle family 6" }
+      ]
+    },
+    "testimonials": {
+      "title": "What Families Say",
+      "preview": [
+        {
+          "name": "Sarah & Michael",
+          "rating": 5,
+          "text": "We couldn't be happier with our puppy from Poodle & Co. The entire process was professional, caring, and transparent. Our little one is healthy, happy, and has the sweetest temperament!"
+        },
+        {
+          "name": "Jennifer L.",
+          "rating": 5,
+          "text": "The care and attention to detail is remarkable. They truly love their dogs and it shows in every interaction. Our poodle is not just a pet, but a beloved family member."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Ready to Welcome a New Family Member?",
+      "description": "Explore our available puppies or get in touch to learn more about upcoming litters and our adoption process.",
+      "buttons": [
+        { "text": "View Available Puppies", "href": "/available-puppies", "variant": "primary" },
+        { "text": "Get in Touch", "href": "/contact", "variant": "outline" }
+      ]
+    }
+  },
+  "whoWeAre": {
+    "title": "Who We Are",
+    "subtitle": "A family dedicated to ethical breeding and the love of poodles",
+    "mainImage": "/family-with-poodles-in-beautiful-home-setting.jpg",
+    "story": {
+      "title": "Our Story",
+      "paragraphs": [
+        "Poodle & Co. began over a decade ago with a simple love for these intelligent, affectionate, and beautiful dogs. What started as a passion has grown into a commitment to ethical breeding practices and finding perfect matches between puppies and families.",
+        "We believe that breeding should prioritize health, temperament, and the overall well-being of our dogs. Every puppy born at Poodle & Co. is raised in our home, surrounded by love and socialization from day one.",
+        "Our mission is to continue the legacy of responsible breeding while building lasting relationships with the families who welcome our puppies into their homes."
+      ]
+    },
+    "values": {
+      "title": "Our Values",
+      "items": [
+        {
+          "title": "Health First",
+          "description": "Comprehensive health testing for all breeding dogs and puppies to ensure the healthiest possible start to life."
+        },
+        {
+          "title": "Ethical Practices",
+          "description": "We follow strict ethical guidelines and never prioritize profit over the well-being of our dogs."
+        },
+        {
+          "title": "Transparency",
+          "description": "Open communication with families about our breeding practices, health records, and puppy development."
+        },
+        {
+          "title": "Lifetime Support",
+          "description": "We're here for you and your puppy throughout their entire life with guidance, support, and care."
+        }
+      ]
+    },
+    "galleryImages": [
+      { "image": "/breeder-with-poodle-puppies.jpg", "alt": "Our team member with puppies" },
+      { "image": "/poodles-playing-in-garden.jpg", "alt": "Poodles playing in our facility" }
+    ]
+  },
+  "ourDogs": {
+    "title": "Our Breeding Dogs",
+    "description": "Meet the wonderful parents behind our beautiful puppies. Each dog has been carefully selected for their exceptional health, temperament, and conformation.",
+    "dogs": [
+      {
+        "name": "Bella",
+        "gender": "Female",
+        "color": "Apricot",
+        "weight": "45 lbs",
+        "traits": ["Gentle", "Intelligent", "Playful"],
+        "health": "OFA Excellent Hips, Clear Eyes, DNA Tested",
+        "image": "/apricot-poodle-female-portrait.jpg"
+      },
+      {
+        "name": "Max",
+        "gender": "Male",
+        "color": "Black",
+        "weight": "55 lbs",
+        "traits": ["Confident", "Loyal", "Athletic"],
+        "health": "OFA Good Hips, Clear Eyes, DNA Tested",
+        "image": "/black-poodle-male-portrait.jpg"
+      },
+      {
+        "name": "Luna",
+        "gender": "Female",
+        "color": "Cream",
+        "weight": "42 lbs",
+        "traits": ["Sweet", "Calm", "Affectionate"],
+        "health": "OFA Excellent Hips, Clear Eyes, DNA Tested",
+        "image": "/cream-poodle-female-portrait.jpg"
+      },
+      {
+        "name": "Cooper",
+        "gender": "Male",
+        "color": "Red",
+        "weight": "50 lbs",
+        "traits": ["Energetic", "Friendly", "Smart"],
+        "health": "OFA Good Hips, Clear Eyes, DNA Tested",
+        "image": "/red-poodle-male-portrait.jpg"
+      }
+    ]
+  },
+  "upcomingLitters": {
+    "title": "Upcoming Litters",
+    "description": "Reserve your spot for our upcoming litters. Contact us early to ensure you don't miss out!",
+    "litters": [
+      {
+        "mother": "Bella",
+        "father": "Max",
+        "expectedDate": "2025-12-15",
+        "status": "Expected",
+        "motherImage": "/apricot-poodle-female.jpg",
+        "fatherImage": "/black-poodle-male.jpg"
+      },
+      {
+        "mother": "Luna",
+        "father": "Cooper",
+        "expectedDate": "2026-01-20",
+        "status": "Planned",
+        "motherImage": "/cream-poodle-female.jpg",
+        "fatherImage": "/red-poodle-male.jpg"
+      }
+    ]
+  },
+  "availablePuppies": {
+    "title": "Available Puppies",
+    "description": "Meet our adorable puppies looking for their forever homes. Each one is raised with love and ready to bring joy to your family.",
+    "puppies": [
+      {
+        "name": "Daisy",
+        "gender": "Female",
+        "color": "Apricot",
+        "birthDate": "2025-09-15",
+        "personality": "Sweet and playful, loves cuddles",
+        "status": "Available",
+        "image": "/apricot-poodle-puppy-female.jpg"
+      },
+      {
+        "name": "Charlie",
+        "gender": "Male",
+        "color": "Black",
+        "birthDate": "2025-09-15",
+        "personality": "Confident and energetic, great with kids",
+        "status": "Reserved",
+        "image": "/black-poodle-puppy-male.jpg"
+      },
+      {
+        "name": "Rosie",
+        "gender": "Female",
+        "color": "Cream",
+        "birthDate": "2025-09-20",
+        "personality": "Gentle and calm, perfect lap dog",
+        "status": "Available",
+        "image": "/placeholder.svg?height=600&width=600"
+      },
+      {
+        "name": "Oliver",
+        "gender": "Male",
+        "color": "Red",
+        "birthDate": "2025-09-20",
+        "personality": "Smart and curious, loves to explore",
+        "status": "Available",
+        "image": "/placeholder.svg?height=600&width=600"
+      }
+    ]
+  },
+  "pastPuppies": {
+    "title": "Past Puppies",
+    "description": "See our beautiful puppies from previous litters, both as adorable babies and grown into stunning adults",
+    "puppies": [
+      {
+        "id": 1,
+        "name": "Poppie",
+        "puppyImage": "/puppies/juliet-puppy.png",
+        "adultImage": "/adults/Poppie.jpeg",
+        "puppyAge": "4 weeks old",
+        "adultAge": "10 months old"
+      },
+      {
+        "id": 2,
+        "name": "Max",
+        "puppyImage": "/black-poodle-puppy-male.jpg",
+        "adultImage": "/black-poodle-male.jpg",
+        "puppyAge": "8 weeks old",
+        "adultAge": "2 years old"
+      },
+      {
+        "id": 3,
+        "name": "Bella",
+        "puppyImage": "/apricot-poodle-puppy-female.jpg",
+        "adultImage": "/apricot-poodle-female.jpg",
+        "puppyAge": "8 weeks old",
+        "adultAge": "2 years old"
+      },
+      {
+        "id": 4,
+        "name": "Cooper",
+        "puppyImage": "/placeholder.svg?height=400&width=400",
+        "adultImage": "/red-poodle-male.jpg",
+        "puppyAge": "8 weeks old",
+        "adultAge": "2 years old"
+      },
+      {
+        "id": 5,
+        "name": "Daisy",
+        "puppyImage": "/placeholder.svg?height=400&width=400",
+        "adultImage": "/cream-poodle-female-portrait.jpg",
+        "puppyAge": "8 weeks old",
+        "adultAge": "2 years old"
+      },
+      {
+        "id": 6,
+        "name": "Charlie",
+        "puppyImage": "/placeholder.svg?height=400&width=400",
+        "adultImage": "/black-poodle-male-portrait.jpg",
+        "puppyAge": "8 weeks old",
+        "adultAge": "2 years old"
+      },
+      {
+        "id": 7,
+        "name": "Rosie",
+        "puppyImage": "/placeholder.svg?height=400&width=400",
+        "adultImage": "/apricot-poodle-female-portrait.jpg",
+        "puppyAge": "8 weeks old",
+        "adultAge": "2 years old"
+      },
+      {
+        "id": 8,
+        "name": "Oliver",
+        "puppyImage": "/placeholder.svg?height=400&width=400",
+        "adultImage": "/red-poodle-male-portrait.jpg",
+        "puppyAge": "8 weeks old",
+        "adultAge": "2 years old"
+      },
+      {
+        "id": 9,
+        "name": "Molly",
+        "puppyImage": "/placeholder.svg?height=400&width=400",
+        "adultImage": "/cream-poodle-female.jpg",
+        "puppyAge": "8 weeks old",
+        "adultAge": "2 years old"
+      },
+      {
+        "id": 10,
+        "name": "Teddy",
+        "puppyImage": "/placeholder.svg?height=400&width=400",
+        "adultImage": "/black-poodle-male.jpg",
+        "puppyAge": "8 weeks old",
+        "adultAge": "2 years old"
+      },
+      {
+        "id": 11,
+        "name": "Sophie",
+        "puppyImage": "/placeholder.svg?height=400&width=400",
+        "adultImage": "/apricot-poodle-female.jpg",
+        "puppyAge": "8 weeks old",
+        "adultAge": "2 years old"
+      },
+      {
+        "id": 12,
+        "name": "Duke",
+        "puppyImage": "/placeholder.svg?height=400&width=400",
+        "adultImage": "/red-poodle-male.jpg",
+        "puppyAge": "8 weeks old",
+        "adultAge": "2 years old"
+      }
+    ]
+  },
+  "reviews": {
+    "title": "Customer Reviews",
+    "description": "Hear from the families who have welcomed our puppies into their homes",
+    "reviews": [
+      {
+        "name": "Sarah & Michael",
+        "location": "Portland, OR",
+        "rating": 5,
+        "text": "We couldn't be happier with our puppy from Poodle & Co. The entire process was professional, caring, and transparent. Our little one is healthy, happy, and has the sweetest temperament!",
+        "image": "/cream-poodle-female.jpg"
+      },
+      {
+        "name": "Jennifer L.",
+        "location": "Seattle, WA",
+        "rating": 5,
+        "text": "The care and attention to detail is remarkable. They truly love their dogs and it shows in every interaction. Our poodle is not just a pet, but a beloved family member.",
+        "image": "/placeholder.svg?height=400&width=400"
+      },
+      {
+        "name": "David & Emma",
+        "location": "San Francisco, CA",
+        "rating": 5,
+        "text": "From the first inquiry to bringing our puppy home, the experience was wonderful. The breeder was always available to answer questions and provided excellent support.",
+        "image": "/placeholder.svg?height=400&width=400"
+      },
+      {
+        "name": "Rachel M.",
+        "location": "Denver, CO",
+        "rating": 5,
+        "text": "Our poodle has brought so much joy to our lives. The health guarantee and ongoing support have been invaluable. Highly recommend Poodle & Co. to anyone looking for a quality breeder.",
+        "image": "/placeholder.svg?height=400&width=400"
+      },
+      {
+        "name": "Tom & Lisa",
+        "location": "Austin, TX",
+        "rating": 5,
+        "text": "We did extensive research before choosing a breeder, and Poodle & Co. exceeded all our expectations. Our puppy is smart, healthy, and perfectly socialized.",
+        "image": "/placeholder.svg?height=400&width=400"
+      },
+      {
+        "name": "Amanda K.",
+        "location": "Boston, MA",
+        "rating": 5,
+        "text": "The transparency about health testing and breeding practices gave us complete confidence. Our poodle is everything we hoped for and more!",
+        "image": "/placeholder.svg?height=400&width=400"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact Us",
+    "description": "We'd love to hear from you! Whether you have questions about our puppies or want to schedule a visit, we're here to help.",
+    "email": "poodleco1@gmail.com",
+    "locations": [
+      "Fayetteville, NC",
+      "Toledo, OH"
+    ],
+    "visitNote": "Visits by appointment only",
+    "social": {
+      "instagram": "https://instagram.com/poodle_and_co",
+      "facebook": "https://www.facebook.com/profile.php?id=100090026601586"
+    }
+  },
+  "footer": {
+    "description": "Dedicated to ethical breeding practices and finding loving homes for our beautiful poodles.",
+    "quickLinks": [
+      { "href": "/who-we-are", "label": "Who We Are" },
+      { "href": "/our-dogs", "label": "Our Dogs" },
+      { "href": "/available-puppies", "label": "Available Puppies" },
+      { "href": "/contact", "label": "Contact Us" }
+    ],
+    "contact": {
+      "email": "poodleco1@gmail.com",
+      "locations": "Fayetteville, NC & Toledo, OH"
+    },
+    "social": {
+      "instagram": "https://instagram.com/poodle_and_co",
+      "facebook": "https://www.facebook.com/profile.php?id=100090026601586"
+    }
+  }
+}
+

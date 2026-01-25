@@ -2,15 +2,9 @@
 
 import Image from "next/image"
 import { useState } from "react"
+import data from "@/data/data.json"
 
-const photos = [
-  { id: 1, query: "happy poodle with owner 1" },
-  { id: 2, query: "happy poodle with owner 2" },
-  { id: 3, query: "happy poodle with owner 3" },
-  { id: 4, query: "happy poodle with owner 4" },
-  { id: 5, query: "happy poodle with owner 5" },
-  { id: 6, query: "happy poodle with owner 6" },
-]
+const photos = data.home.gallery.photos
 
 export function PhotoCarousel() {
   const [isPaused, setIsPaused] = useState(false)
@@ -32,8 +26,8 @@ export function PhotoCarousel() {
             className="relative flex-shrink-0 w-[300px] md:w-[400px] aspect-square rounded-xl overflow-hidden group cursor-pointer"
           >
             <Image
-              src={`/happy-poodle-with-owner-.jpg?height=600&width=600&query=${photo.query}`}
-              alt={`Happy poodle family ${photo.id}`}
+              src={photo.image}
+              alt={photo.alt}
               fill
               className="object-cover transition-transform duration-300 group-hover:scale-110"
             />
@@ -47,8 +41,8 @@ export function PhotoCarousel() {
             className="relative flex-shrink-0 w-[300px] md:w-[400px] aspect-square rounded-xl overflow-hidden group cursor-pointer"
           >
             <Image
-              src={`/happy-poodle-with-owner-.jpg?height=600&width=600&query=${photo.query}`}
-              alt={`Happy poodle family ${photo.id}`}
+              src={photo.image}
+              alt={photo.alt}
               fill
               className="object-cover transition-transform duration-300 group-hover:scale-110"
             />

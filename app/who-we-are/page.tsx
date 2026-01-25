@@ -12,7 +12,7 @@ export default function WhoWeArePage() {
         <div className="container mx-auto max-w-4xl">
           <h1 className="text-5xl md:text-6xl font-serif font-bold mb-6 text-center">Who We Are</h1>
           <p className="text-xl text-muted-foreground text-center mb-16 leading-relaxed">
-            A family dedicated to ethical breeding and the love of poodles
+            At Poodle & Co., we're passionate dog lovers devoted to raising well-bred, family-raised puppies with health and heart in mind.
           </p>
 
           <div className="relative aspect-[16/9] rounded-2xl overflow-hidden mb-16">
@@ -22,17 +22,16 @@ export default function WhoWeArePage() {
           <div className="prose prose-lg max-w-none mb-16">
             <h2 className="text-3xl font-serif font-bold mb-4">Our Story</h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Poodle & Co. began over a decade ago with a simple love for these intelligent, affectionate, and beautiful
-              dogs. What started as a passion has grown into a commitment to ethical breeding practices and finding
-              perfect matches between puppies and families.
+              Poodle & Co. began with a simple love for dogs and a passion for doing things the right way. What started as a small family dream has grown into a breeding program built on care, compassion, and quality.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              We believe that breeding should prioritize health, temperament, and the overall well-being of our dogs.
-              Every puppy born at Poodle & Co. is raised in our home, surrounded by love and socialization from day one.
+              At Poodle & Co., our mission is to raise healthy, happy, and well-socialized puppies that bring joy to the families they join. All of our parent dogs are health tested, ethically bred, and raised in a loving home environment. We focus on temperament, intelligence, and beauty, but most importantly, on building a strong foundation of trust and love from day one.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              We're proud to specialize in Poodles and Mini Sheepadoodles — each known for their loyalty, intelligence, and gentle nature. Whether you're looking for a playful companion, a loyal family dog, or a therapy prospect, our puppies are raised to become lifelong best friends.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              Our mission is to continue the legacy of responsible breeding while building lasting relationships with
-              the families who welcome our puppies into their homes.
+              For us, this isn't just a business — it's a calling. Every litter represents our commitment to bettering the breeds we love and helping families find the perfect new member of their pack. Welcome to Poodle & Co. — where family, love, and paws meet.
             </p>
           </div>
 
@@ -43,8 +42,7 @@ export default function WhoWeArePage() {
                 <CardContent className="pt-6">
                   <h3 className="text-xl font-semibold mb-3">Health First</h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    Comprehensive health testing for all breeding dogs and puppies to ensure the healthiest possible
-                    start to life.
+                    Comprehensive health testing for all parent dogs and puppies to ensure the healthiest possible start to life.
                   </p>
                 </CardContent>
               </Card>
@@ -53,7 +51,7 @@ export default function WhoWeArePage() {
                 <CardContent className="pt-6">
                   <h3 className="text-xl font-semibold mb-3">Ethical Practices</h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    We follow strict ethical guidelines and never prioritize profit over the well-being of our dogs.
+                    We follow strict ethical standards and always prioritize the well-being of our dogs above all else.
                   </p>
                 </CardContent>
               </Card>
@@ -62,8 +60,7 @@ export default function WhoWeArePage() {
                 <CardContent className="pt-6">
                   <h3 className="text-xl font-semibold mb-3">Transparency</h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    Open communication with families about our breeding practices, health records, and puppy
-                    development.
+                    We maintain open communication with families about our breeding practices, health testing, and puppy development every step of the way.
                   </p>
                 </CardContent>
               </Card>
@@ -72,7 +69,7 @@ export default function WhoWeArePage() {
                 <CardContent className="pt-6">
                   <h3 className="text-xl font-semibold mb-3">Lifetime Support</h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    We're here for you and your puppy throughout their entire life with guidance, support, and care.
+                    We're here for you and your puppy for life, offering ongoing guidance, support, and care whenever you need it.
                   </p>
                 </CardContent>
               </Card>

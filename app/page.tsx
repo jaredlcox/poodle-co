@@ -27,8 +27,7 @@ export default function HomePage() {
             Welcome to Poodle & Co.
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed animate-in fade-in slide-in-from-bottom-4 duration-700 delay-150">
-            Where compassion meets excellence in ethical poodle breeding. We're dedicated to raising healthy, happy
-            puppies and matching them with loving families.
+            Rooted in love, raised with care. We're passionate about raising healthy, happy puppies who bring joy to every home.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300">
             <Button asChild size="lg" variant="secondary" className="rounded-full w-full sm:w-auto">
@@ -56,8 +55,7 @@ export default function HomePage() {
                 </div>
                 <h3 className="text-xl font-semibold mb-3">Ethical Breeding</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  We prioritize the health and well-being of our dogs above all else, following the highest ethical
-                  standards.
+                  Every pairing is carefully planned with health, temperament, and breed integrity as our top priorities.
                 </p>
               </CardContent>
             </Card>
@@ -69,7 +67,7 @@ export default function HomePage() {
                 </div>
                 <h3 className="text-xl font-semibold mb-3">Health Guarantee</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  All our puppies come with comprehensive health testing and a lifetime of support for their families.
+                  All of our parent dogs are health tested to ensure strong genetics and healthy, happy puppies.
                 </p>
               </CardContent>
             </Card>
@@ -79,9 +77,9 @@ export default function HomePage() {
                 <div className="w-16 h-16 bg-accent/30 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Home className="h-8 w-8 text-accent-foreground" />
                 </div>
-                <h3 className="text-xl font-semibold mb-3">Loving Homes</h3>
+                <h3 className="text-xl font-semibold mb-3">Family Raised</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  We carefully match each puppy with the perfect family to ensure a lifetime of happiness together.
+                  Our puppies are raised in our home with love, socialization, and daily interaction to prepare them for yours.
                 </p>
               </CardContent>
             </Card>
@@ -92,11 +90,55 @@ export default function HomePage() {
       {/* Photo Gallery Section */}
       <section className="py-20 px-4 bg-muted/20">
         <div className="container mx-auto">
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-center mb-4">Happy Families</h2>
+          <h2 className="text-4xl md:text-5xl font-serif font-bold text-center mb-4">From Our Home to Theirs</h2>
           <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-            See the joy our puppies bring to their forever homes
+            See our pups thriving with their new families
           </p>
           <PhotoCarousel />
+        </div>
+      </section>
+
+      {/* Our Values Section */}
+      <section className="py-20 px-4">
+        <div className="container mx-auto">
+          <h2 className="text-4xl md:text-5xl font-serif font-bold text-center mb-12">Our Values</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            <Card className="border-none shadow-sm bg-card/50">
+              <CardContent className="pt-6 text-center">
+                <h3 className="text-xl font-semibold mb-3">Health First</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Comprehensive health testing for all parent dogs and puppies to ensure the healthiest possible start to life.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-none shadow-sm bg-card/50">
+              <CardContent className="pt-6 text-center">
+                <h3 className="text-xl font-semibold mb-3">Ethical Practices</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  We follow strict ethical standards and always prioritize the well-being of our dogs above all else.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-none shadow-sm bg-card/50">
+              <CardContent className="pt-6 text-center">
+                <h3 className="text-xl font-semibold mb-3">Transparency</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  We maintain open communication with families about our breeding practices, health testing, and puppy development every step of the way.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-none shadow-sm bg-card/50">
+              <CardContent className="pt-6 text-center">
+                <h3 className="text-xl font-semibold mb-3">Lifetime Support</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  We're here for you and your puppy for life, offering ongoing guidance, support, and care whenever you need it.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </section>
 

@@ -3,11 +3,11 @@ import { Footer } from "@/components/footer"
 import { Card, CardContent } from "@/components/ui/card"
 import { Star } from "lucide-react"
 import Image from "next/image"
-import data from "@/data/data.json"
+import { loadSiteDataServer } from "@/lib/data/server-loader"
 
-const reviews = data.reviews.reviews
-
-export default function ReviewsPage() {
+export default async function ReviewsPage() {
+  const data = await loadSiteDataServer()
+  const reviews = data.reviews.reviews
   return (
     <div className="min-h-screen">
       <Navigation />

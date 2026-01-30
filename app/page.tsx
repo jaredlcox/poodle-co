@@ -16,7 +16,7 @@ export default function HomePage() {
       <section className="relative h-[90vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-accent/20 via-background to-secondary/20" />
         <Image
-          src="/happy-poodle-family-in-sunny-garden.jpg"
+          src="/parents/breeding-dogs.png"
           alt="Happy poodles"
           fill
           className="object-cover opacity-20"

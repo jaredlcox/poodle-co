@@ -65,7 +65,7 @@ export default function UpcomingLittersPage() {
 
           <div className="space-y-10">
             {upcomingLitters.map((litter, index) => (
-              <Card key={index} className="border-none shadow-sm bg-card/50 overflow-hidden">
+              <Card key={index} className="border-none shadow-sm bg-card/70 overflow-hidden">
                 <CardHeader className="px-6 md:px-8">
                   <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                     <div className="space-y-1">

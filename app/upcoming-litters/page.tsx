@@ -22,36 +22,31 @@ const upcomingLitters = [
 ]
 
 function CountdownTimer({ targetDate }: { targetDate: Date }) {
-  const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 })
+  const [daysLeft, setDaysLeft] = useState(0)
 
   useEffect(() => {
-    const calculateTimeLeft = () => {
-      const difference = targetDate.getTime() - new Date().getTime()
-      if (difference > 0) {
-        setTimeLeft({
-          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-          hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-          minutes: Math.floor((difference / 1000 / 60) % 60),
-          seconds: Math.floor((difference / 1000) % 60),
-        })
+    const calculateDaysLeft = () => {
+      const startOfTarget = new Date(targetDate)
+      startOfTarget.setHours(0, 0, 0, 0)
+      const startOfToday = new Date()
+      startOfToday.setHours(0, 0, 0, 0)
+      const difference = startOfTarget.getTime() - startOfToday.getTime()
+      if (difference >= 0) {
+        setDaysLeft(Math.floor(difference / (1000 * 60 * 60 * 24)))
       }
     }
 
-    calculateTimeLeft()
-    const timer = setInterval(calculateTimeLeft, 1000)
+    calculateDaysLeft()
+    const timer = setInterval(calculateDaysLeft, 60000) // update once per minute
     return () => clearInterval(timer)
   }, [targetDate])
 
   return (
-    <div className="flex gap-4 justify-center">
-      {Object.entries(timeLeft).map(([unit, value]) => (
-        <div key={unit} className="text-center">
-          <div className="bg-primary/10 rounded-lg p-3 min-w-[60px]">
-            <div className="text-2xl font-bold">{value}</div>
-          </div>
-          <div className="text-xs text-muted-foreground mt-1 capitalize">{unit}</div>
-        </div>
-      ))}
+    <div className="inline-flex items-baseline gap-2 rounded-lg bg-primary/10 px-5 py-3">
+      <span className="text-2xl font-bold tabular-nums">{daysLeft}</span>
+      <span className="text-muted-foreground">
+        {daysLeft === 1 ? "day" : "days"} to go
+      </span>
     </div>
   )
 }
@@ -68,32 +63,35 @@ export default function UpcomingLittersPage() {
             Reserve your spot for our upcoming litters. Contact us early to ensure you don't miss out!
           </p>
 
-          <div className="space-y-12">
+          <div className="space-y-10">
             {upcomingLitters.map((litter, index) => (
               <Card key={index} className="border-none shadow-sm bg-card/50 overflow-hidden">
-                <CardHeader className="bg-muted/30">
-                  <div className="flex items-center justify-between">
-                    <CardTitle className="text-2xl font-serif">
-                      {litter.mother} × {litter.father}
-                    </CardTitle>
-                    <Badge variant={litter.status === "Expected" ? "default" : "secondary"}>{litter.status}</Badge>
-                  </div>
-                  <div className="flex items-center gap-2 text-muted-foreground">
-                    <Calendar className="h-4 w-4" />
-                    <span>
-                      Expected:{" "}
-                      {litter.expectedDate.toLocaleDateString("en-US", {
-                        month: "long",
-                        day: "numeric",
-                        year: "numeric",
-                      })}
-                    </span>
+                <CardHeader className="px-6 md:px-8">
+                  <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                    <div className="space-y-1">
+                      <CardTitle className="text-2xl font-serif tracking-tight">
+                        {litter.mother} & {litter.father}
+                      </CardTitle>
+                      <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                        <Calendar className="h-4 w-4 shrink-0" />
+                        <span>
+                          Expected {litter.expectedDate.toLocaleDateString("en-US", {
+                            month: "long",
+                            day: "numeric",
+                            year: "numeric",
+                          })}
+                        </span>
+                      </div>
+                    </div>
+                    <Badge variant={litter.status === "Expected" ? "default" : "secondary"} className="w-fit shrink-0">
+                      {litter.status}
+                    </Badge>
                   </div>
                 </CardHeader>
-                <CardContent className="pt-8">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-                    <div>
-                      <h3 className="text-lg font-semibold mb-3 text-center">Mother: {litter.mother}</h3>
+                <CardContent className="px-6 pt-6 pb-8 md:px-8 md:pt-8">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                    <div className="space-y-2">
+                      <h3 className="text-base font-semibold text-center">Mother: {litter.mother}</h3>
                       <div className="relative aspect-square rounded-xl overflow-hidden">
                         <Image
                           src={litter.motherImage || "/placeholder.svg"}
@@ -103,8 +101,8 @@ export default function UpcomingLittersPage() {
                         />
                       </div>
                     </div>
-                    <div>
-                      <h3 className="text-lg font-semibold mb-3 text-center">Father: {litter.father}</h3>
+                    <div className="space-y-2">
+                      <h3 className="text-base font-semibold text-center">Father: {litter.father}</h3>
                       <div className="relative aspect-square rounded-xl overflow-hidden">
                         <Image
                           src={litter.fatherImage || "/placeholder.svg"}
@@ -117,8 +115,8 @@ export default function UpcomingLittersPage() {
                   </div>
 
                   {litter.status === "Expected" && (
-                    <div className="mb-6">
-                      <h4 className="text-center font-semibold mb-4">Time Until Arrival</h4>
+                    <div className="flex flex-col items-center gap-3 mb-8">
+                      <span className="text-sm font-medium text-muted-foreground">Time until arrival</span>
                       <CountdownTimer targetDate={litter.expectedDate} />
                     </div>
                   )}

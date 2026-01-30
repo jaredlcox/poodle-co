@@ -12,20 +12,12 @@ import { useEffect, useState } from "react"
 
 const upcomingLitters = [
   {
-    mother: "Bella",
-    father: "Max",
-    expectedDate: new Date("2025-12-15"),
+    mother: "Gema",
+    father: "Copper",
+    expectedDate: new Date("2026-02-09"),
     status: "Expected",
-    motherImage: "/apricot-poodle-female.jpg",
-    fatherImage: "/black-poodle-male.jpg",
-  },
-  {
-    mother: "Luna",
-    father: "Cooper",
-    expectedDate: new Date("2026-01-20"),
-    status: "Planned",
-    motherImage: "/cream-poodle-female.jpg",
-    fatherImage: "/red-poodle-male.jpg",
+    motherImage: "/parents/Gema.jpg",
+    fatherImage: "/parents/Copper.jpg",
   },
 ]
 

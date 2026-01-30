@@ -6,41 +6,41 @@ import Image from "next/image"
 
 const breedingDogs = [
   {
-    name: "Bella",
+    name: "Juno",
     gender: "Female",
-    color: "Apricot",
+    color: "Merle",
     weight: "45 lbs",
     traits: ["Gentle", "Intelligent", "Playful"],
     health: "OFA Excellent Hips, Clear Eyes, DNA Tested",
-    image: "/apricot-poodle-female-portrait.jpg",
+    image: "/Juno_4.jpg",
   },
   {
-    name: "Max",
-    gender: "Male",
-    color: "Black",
-    weight: "55 lbs",
-    traits: ["Confident", "Loyal", "Athletic"],
-    health: "OFA Good Hips, Clear Eyes, DNA Tested",
-    image: "/black-poodle-male-portrait.jpg",
-  },
-  {
-    name: "Luna",
-    gender: "Female",
-    color: "Cream",
-    weight: "42 lbs",
-    traits: ["Sweet", "Calm", "Affectionate"],
-    health: "OFA Excellent Hips, Clear Eyes, DNA Tested",
-    image: "/cream-poodle-female-portrait.jpg",
-  },
-  {
-    name: "Cooper",
+    name: "Copper",
     gender: "Male",
     color: "Red",
-    weight: "50 lbs",
-    traits: ["Energetic", "Friendly", "Smart"],
+    weight: "15 lbs",
+    traits: ["Confident", "Loyal", "Athletic"],
     health: "OFA Good Hips, Clear Eyes, DNA Tested",
-    image: "/red-poodle-male-portrait.jpg",
+    image: "/parents/Copper.jpg",
   },
+  {
+    name: "Nova",
+    gender: "Female",
+    color: "Cream",
+    weight: "55 lbs",
+    traits: ["Sweet", "Calm", "Affectionate"],
+    health: "OFA Excellent Hips, Clear Eyes, DNA Tested",
+    image: "/Nova.jpg",
+  },
+  {
+    name: "Gema",
+    gender: "Female",
+    color: "—",
+    weight: "—",
+    traits: ["Calm", "Gentle", "Intelligent"],
+    health: "Health tested",
+    image: "/parents/Gema.jpg",
+  }
 ]
 
 export default function OurDogsPage() {

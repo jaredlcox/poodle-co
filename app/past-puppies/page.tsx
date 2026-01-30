@@ -6,10 +6,49 @@ import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 
+const puppyImages = [
+  // { src: "/past-litters/as-puppies/Amour wk3.png", name: "Amour", age: "3 weeks old" },
+  // { src: "/past-litters/as-puppies/Amour wk4.png", name: "Amour", age: "4 weeks old" },
+  { src: "/past-litters/as-puppies/Amour wk6.5.png", name: "Amour", age: "6.5 weeks old" },
+  { src: "/past-litters/as-puppies/buddywk2.png", name: "Buddy", age: "2 weeks old" },
+  // { src: "/past-litters/as-puppies/Cocoa wk1.png", name: "Cocoa", age: "1 week old" },
+  { src: "/past-litters/as-puppies/cocoa wk2.png", name: "Cocoa", age: "2 weeks old" },
+  { src: "/past-litters/as-puppies/crystal wk2.png", name: "Crystal", age: "2 weeks old" },
+  // { src: "/past-litters/as-puppies/Cupid wk3.png", name: "Cupid", age: "3 weeks old" },
+  // { src: "/past-litters/as-puppies/cupid wk4.png", name: "Cupid", age: "4 weeks old" },
+  { src: "/past-litters/as-puppies/Cupid wk6.png", name: "Cupid", age: "6 weeks old" },
+  { src: "/past-litters/as-puppies/Frosty wk1.png", name: "Frosty", age: "1 week old" },
+  // { src: "/past-litters/as-puppies/Juliet wk 3.png", name: "Juliet", age: "3 weeks old" },
+  { src: "/past-litters/as-puppies/Juliet wk4.png", name: "Juliet", age: "4 weeks old" },
+  { src: "/past-litters/as-puppies/Moose wk2.png", name: "Moose", age: "2 weeks old" },
+  { src: "/past-litters/as-puppies/Romeo wk3.png", name: "Romeo", age: "3 weeks old" },
+  // { src: "/past-litters/as-puppies/Rose wk3.png", name: "Rose", age: "3 weeks old" },
+  { src: "/past-litters/as-puppies/rose wk4.png", name: "Rose", age: "4 weeks old" },
+  // { src: "/past-litters/as-puppies/Ruby wk3.png", name: "Ruby", age: "3 weeks old" },
+  // { src: "/past-litters/as-puppies/Ruby wk4.png", name: "Ruby", age: "4 weeks old" },
+  { src: "/past-litters/as-puppies/Ruby week 6.png", name: "Ruby", age: "6 weeks old" },
+  // { src: "/past-litters/as-puppies/Scarlett wk3.png", name: "Scarlett", age: "3 weeks old" },
+  { src: "/past-litters/as-puppies/Scarlett wk 4.png", name: "Scarlett", age: "4 weeks old" },
+  // { src: "/past-litters/as-puppies/Velvet wk3.png", name: "Velvet", age: "3 weeks old" },
+  // { src: "/past-litters/as-puppies/Velvet wk4.png", name: "Velvet", age: "4 weeks old" },
+  { src: "/past-litters/as-puppies/Velvet wk6.5.png", name: "Velvet", age: "6.5 weeks old" },
+  { src: "/past-litters/as-puppies/winter wk1.png", name: "Winter", age: "1 week old" },
+]
+
+const adultImages = [
+  { src: "/past-litters/as-adults/caramella.jpg", name: "Caramella", age: "All grown up" },
+  { src: "/past-litters/as-adults/Ernie.jpg", name: "Ernie", age: "All grown up" },
+  { src: "/past-litters/as-adults/kodak.jpg", name: "Kodak", age: "All grown up" },
+  { src: "/past-litters/as-adults/myla1.jpg", name: "Myla", age: "All grown up" },
+  { src: "/past-litters/as-adults/penny  .jpg", name: "Penny", age: "All grown up" },
+  { src: "/past-litters/as-adults/poppie.jpg", name: "Poppie", age: "All grown up" },
+  { src: "/past-litters/as-adults/Winnie .jpg", name: "Winnie", age: "All grown up" },
+]
+
 export default function PastPuppiesPage() {
   const [activeTab, setActiveTab] = useState<"puppies" | "adults">("puppies")
 
-  const puppyImages = Array.from({ length: 12 }, (_, i) => i + 1)
+  const images = activeTab === "puppies" ? puppyImages : adultImages
 
   return (
     <div className="min-h-screen">
@@ -42,20 +81,19 @@ export default function PastPuppiesPage() {
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {puppyImages.map((i) => (
+            {images.map((image, i) => (
               <div key={i} className="relative aspect-square rounded-xl overflow-hidden group cursor-pointer">
                 <Image
-                  src={`/.jpg?height=400&width=400&query=${
-                    activeTab === "puppies" ? "cute poodle puppy" : "adult poodle"
-                  } ${i}`}
-                  alt={`${activeTab === "puppies" ? "Puppy" : "Adult"} ${i}`}
+                  src={image.src}
+                  alt={image.name}
                   fill
                   className="object-cover transition-transform duration-300 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                  <p className="text-white font-medium text-sm">
-                    {activeTab === "puppies" ? "8 weeks old" : "2 years old"}
-                  </p>
+                  <div>
+                    <p className="text-white font-medium">{image.name}</p>
+                    <p className="text-white/80 text-sm">{image.age}</p>
+                  </div>
                 </div>
               </div>
             ))}

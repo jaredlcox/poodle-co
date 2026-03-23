@@ -9,11 +9,12 @@ type CarouselPhoto = { id: number; src: string; alt: string }
 const photos: CarouselPhoto[] = [
   { id: 1, src: "/carousel-images/Caramella.jpg", alt: "Caramella" },
   { id: 2, src: "/carousel-images/Ernie.jpg", alt: "Ernie" },
-  { id: 3, src: "/carousel-images/Kodak_puppy.jpg", alt: "Kodak as a puppy" },
-  { id: 4, src: "/carousel-images/Myla.jpg", alt: "Myla" },
-  { id: 5, src: "/carousel-images/Poppie_puppy.jpg", alt: "Poppie as a puppy" },
-  { id: 6, src: "/carousel-images/Kodak.jpg", alt: "Kodak" },
-  { id: 7, src: "/carousel-images/winnie.jpg", alt: "Winnie" },
+  { id: 3, src: "/carousel-images/winnie_new_fam.jpg", alt: "Winnie" },
+  { id: 4, src: "/carousel-images/Kodak_puppy.jpg", alt: "Kodak as a puppy" },
+  { id: 5, src: "/carousel-images/Myla.jpg", alt: "Myla" },
+  { id: 6, src: "/carousel-images/Poppie_puppy.jpg", alt: "Poppie as a puppy" },
+  { id: 7, src: "/carousel-images/Kodak.jpg", alt: "Kodak" },
+  { id: 8, src: "/carousel-images/winnie.jpg", alt: "Winnie" },
 ]
 
 function CarouselSet({ photos: setPhotos, prefix }: { photos: CarouselPhoto[]; prefix: string }) {

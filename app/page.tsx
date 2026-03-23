@@ -2,7 +2,7 @@ import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Heart, Shield, Home, Star } from "lucide-react"
+import { Heart, Shield, Home } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 import { PhotoCarousel } from "@/components/photo-carousel"
@@ -142,7 +142,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Testimonials Preview */}
+      {/*
+      Testimonials Preview (temporarily hidden)
       <section className="py-20 px-4">
         <div className="container mx-auto">
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-center mb-12">What Families Say</h2>
@@ -184,6 +185,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      */}
 
       {/* CTA Section */}
       <section className="py-20 px-4 bg-gradient-to-br from-primary/10 via-accent/10 to-secondary/10">

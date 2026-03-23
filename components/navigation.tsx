@@ -12,7 +12,7 @@ const navLinks = [
   { href: "/past-puppies", label: "Past Puppies" },
   { href: "/upcoming-litters", label: "Upcoming Litters" },
   { href: "/available-puppies", label: "Available Puppies" },
-  { href: "/reviews", label: "Customer Reviews" },
+  // { href: "/reviews", label: "Customer Reviews" },
   { href: "/contact", label: "Contact Us" },
 ]
 

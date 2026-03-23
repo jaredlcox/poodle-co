@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import { Facebook, Instagram, Mail } from "lucide-react"
 
 export function Footer() {
@@ -7,7 +8,15 @@ export function Footer() {
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div>
-            <h3 className="text-xl font-serif font-bold mb-4">Poodle & Co.</h3>
+            <Link href="/" className="inline-block mb-4">
+              <Image
+                src="/poodle-logo.png"
+                alt="Poodle & Co."
+                width={1000}
+                height={1000}
+                className="h-10 w-auto object-contain"
+              />
+            </Link>
             <p className="text-sm text-muted-foreground leading-relaxed">
               Dedicated to ethical breeding practices and finding loving homes for our beautiful poodles.
             </p>

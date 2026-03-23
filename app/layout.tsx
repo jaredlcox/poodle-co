@@ -21,6 +21,9 @@ export const metadata: Metadata = {
   title: "Poodle & Co. - Ethical Poodle Breeders",
   description: "Compassionate and ethical poodle breeding with a focus on health, temperament, and loving homes.",
   generator: "v0.app",
+  icons: {
+    icon: "/poodle-favicon.png",
+  },
 }
 
 export default function RootLayout({

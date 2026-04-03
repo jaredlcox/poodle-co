@@ -1,22 +1,126 @@
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import Image from "next/image"
 import Link from "next/link"
 import { Empty, EmptyHeader, EmptyTitle, EmptyDescription, EmptyContent, EmptyMedia } from "@/components/ui/empty"
 import { PawPrint } from "lucide-react"
+import { PuppyCard, type PuppyCardData } from "@/components/puppy-card"
 
-const availablePuppies: Array<{
-  name: string
-  gender: string
-  color: string
-  birthDate: string
-  personality: string
-  status: string
-  image: string
-}> = []
+const availablePuppies: PuppyCardData[] = [
+  {
+    name: "Levi",
+    gender: "Male",
+    color: "Tricolor — black, tan & white",
+    birthDate: "February 2026",
+    status: "Available",
+    images: [
+      "/puppies/levi/levi-1.png",
+      "/puppies/levi/levi-2.png",
+      "/puppies/levi/levi-3.png",
+      "/puppies/levi/levi-4.png",
+      "/puppies/levi/levi-5.png",
+      "/puppies/levi/levi-6.png",
+      "/puppies/levi/levi-7.png",
+    ],
+  },
+  {
+    name: "Skylar",
+    gender: "Female",
+    color: "White with apricot markings",
+    birthDate: "February 2026",
+    status: "Available",
+    images: [
+      "/puppies/skylar/skylar-1.png",
+      "/puppies/skylar/skylar-2.png",
+      "/puppies/skylar/skylar-3.png",
+      "/puppies/skylar/skylar-4.png",
+      "/puppies/skylar/skylar-5.png",
+      "/puppies/skylar/skylar-6.png",
+      "/puppies/skylar/skylar-7.png",
+    ],
+  },
+  {
+    name: "Penny",
+    gender: "Female",
+    color: "Apricot with white markings",
+    birthDate: "February 2026",
+    status: "Available",
+    images: [
+      "/puppies/penny/penny-1.png",
+      "/puppies/penny/penny-2.png",
+      "/puppies/penny/penny-3.png",
+      "/puppies/penny/penny-4.png",
+      "/puppies/penny/penny-5.png",
+      "/puppies/penny/penny-6.png",
+      "/puppies/penny/penny-7.png",
+    ],
+  },
+  {
+    name: "Bingo",
+    gender: "Female",
+    color: "Apricot with white chest",
+    birthDate: "February 2026",
+    status: "Available",
+    images: [
+      "/puppies/bingo/bingo-1.png",
+      "/puppies/bingo/bingo-2.png",
+      "/puppies/bingo/bingo-3.png",
+      "/puppies/bingo/bingo-4.png",
+      "/puppies/bingo/bingo-5.png",
+      "/puppies/bingo/bingo-6.png",
+      "/puppies/bingo/bingo-7.png",
+    ],
+  },
+  {
+    name: "Winnie",
+    gender: "Female",
+    color: "Apricot with white blaze & chest",
+    birthDate: "February 2026",
+    status: "Available",
+    images: [
+      "/puppies/winnie/winnie-1.png",
+      "/puppies/winnie/winnie-2.png",
+      "/puppies/winnie/winnie-3.png",
+      "/puppies/winnie/winnie-4.png",
+      "/puppies/winnie/winnie-5.png",
+      "/puppies/winnie/winnie-6.png",
+      "/puppies/winnie/winnie-7.png",
+    ],
+  },
+  {
+    name: "Bluey",
+    gender: "Female",
+    color: "Golden apricot with white blaze & chest",
+    birthDate: "February 2026",
+    status: "Available",
+    images: [
+      "/puppies/bluey/bluey-1.png",
+      "/puppies/bluey/bluey-2.png",
+      "/puppies/bluey/bluey-3.png",
+      "/puppies/bluey/bluey-4.png",
+      "/puppies/bluey/bluey-5.png",
+      "/puppies/bluey/bluey-6.png",
+      "/puppies/bluey/bluey-7.png",
+    ],
+  },
+  {
+    name: "Snow White",
+    gender: "Female",
+    color: "White with tan markings",
+    birthDate: "February 2026",
+    status: "Available",
+    images: [
+      // "/puppies/snow-white/snow-white-1.png",
+      "/puppies/snow-white/snow-white-2.png",
+      "/puppies/snow-white/snow-white-3.png",
+      "/puppies/snow-white/snow-white-4.png",
+      "/puppies/snow-white/snow-white-5.png",
+      "/puppies/snow-white/snow-white-6.png",
+      "/puppies/snow-white/snow-white-7.png",
+      "/puppies/snow-white/snow-white-8.png",
+    ],
+  },
+]
 
 export default function AvailablePuppiesPage() {
   const hasPuppies = availablePuppies.length > 0
@@ -37,40 +141,7 @@ export default function AvailablePuppiesPage() {
           {hasPuppies ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
               {availablePuppies.map((puppy) => (
-                <Card key={puppy.name} className="border-none shadow-sm bg-card/50 overflow-hidden group">
-                  <div className="relative aspect-square overflow-hidden">
-                    <Image
-                      src={puppy.image || "/placeholder.svg"}
-                      alt={puppy.name}
-                      fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-110"
-                    />
-                    <div className="absolute top-4 right-4">
-                      <Badge variant={puppy.status === "Available" ? "default" : "secondary"} className="shadow-lg">
-                        {puppy.status}
-                      </Badge>
-                    </div>
-                  </div>
-                  <CardHeader>
-                    <div className="flex items-center justify-between mb-2">
-                      <CardTitle className="text-2xl font-serif">{puppy.name}</CardTitle>
-                      <Badge variant="outline">{puppy.gender}</Badge>
-                    </div>
-                    <div className="flex gap-2 text-sm text-muted-foreground">
-                      <span>{puppy.color}</span>
-                      <span>•</span>
-                      <span>Born {puppy.birthDate}</span>
-                    </div>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground mb-4 leading-relaxed">{puppy.personality}</p>
-                    <Button asChild className="w-full rounded-full" disabled={puppy.status === "Reserved"}>
-                      <Link href="/contact">
-                        {puppy.status === "Available" ? "Inquire About " + puppy.name : "Reserved"}
-                      </Link>
-                    </Button>
-                  </CardContent>
-                </Card>
+                <PuppyCard key={puppy.name} puppy={puppy} />
               ))}
             </div>
           ) : (

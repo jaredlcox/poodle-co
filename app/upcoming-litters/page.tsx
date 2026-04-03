@@ -5,7 +5,7 @@ import { Footer } from "@/components/footer"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { Calendar } from "lucide-react"
+import { Calendar, PawPrint } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { useEffect, useState } from "react"
@@ -15,7 +15,7 @@ const upcomingLitters = [
     mother: "Gema",
     father: "Copper",
     expectedDate: new Date("2026-02-09"),
-    status: "Expected",
+    status: "Available Now",
     motherImage: "/parents/Gema.jpg",
     fatherImage: "/parents/Copper.jpg",
   },
@@ -60,7 +60,7 @@ export default function UpcomingLittersPage() {
         <div className="container mx-auto max-w-5xl">
           <h1 className="text-5xl md:text-6xl font-serif font-bold mb-6 text-center">Upcoming Litters</h1>
           <p className="text-xl text-muted-foreground text-center mb-16 max-w-3xl mx-auto leading-relaxed">
-            Reserve your spot for our upcoming litters. Contact us early to ensure you don't miss out!
+            Stay up to date on planned pairings, and see when puppies become available.
           </p>
 
           <div className="space-y-10">
@@ -121,11 +121,31 @@ export default function UpcomingLittersPage() {
                     </div>
                   )}
 
-                  <div className="text-center">
-                    <Button asChild size="lg" className="rounded-full">
-                      <Link href="/contact">Reserve Your Puppy</Link>
-                    </Button>
-                  </div>
+                  {litter.status === "Available Now" && (
+                    <div className="mb-8 rounded-2xl border border-primary/20 bg-primary/5 p-5 md:p-6">
+                      <div className="flex flex-col items-center gap-4 text-center">
+                        <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1">
+                          <PawPrint className="h-4 w-4 text-primary" />
+                          <span className="text-sm font-semibold text-primary">Puppies are now available</span>
+                        </div>
+                        <p className="max-w-2xl text-sm md:text-base text-muted-foreground leading-relaxed">
+                          The {litter.mother} and {litter.father} litter has arrived. Visit our available puppies page
+                          to see current puppies and details.
+                        </p>
+                        <Button asChild size="lg" className="rounded-full">
+                          <Link href="/available-puppies">View Available Puppies</Link>
+                        </Button>
+                      </div>
+                    </div>
+                  )}
+
+                  {litter.status !== "Available Now" && (
+                    <div className="text-center">
+                      <Button asChild size="lg" className="rounded-full">
+                        <Link href="/contact">Reserve Your Puppy</Link>
+                      </Button>
+                    </div>
+                  )}
                 </CardContent>
               </Card>
             ))}

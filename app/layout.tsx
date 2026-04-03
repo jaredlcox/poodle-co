@@ -18,7 +18,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "Poodle & Co. - Ethical Poodle Breeders",
+  title: "Poodle & Co",
   description: "Compassionate and ethical poodle breeding with a focus on health, temperament, and loving homes.",
   generator: "v0.app",
   manifest: "/site.webmanifest",

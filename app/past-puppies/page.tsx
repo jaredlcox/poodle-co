@@ -19,7 +19,7 @@ const puppyImages = [
   { src: "/past-litters/as-puppies/Cupid wk6.png", name: "Cupid", age: "6 weeks old" },
   { src: "/past-litters/as-puppies/Frosty wk1.png", name: "Frosty", age: "1 week old" },
   // { src: "/past-litters/as-puppies/Juliet wk 3.png", name: "Juliet", age: "3 weeks old" },
-  { src: "/past-litters/as-puppies/Juliet wk4.png", name: "Juliet", age: "4 weeks old" },
+  { src: "/past-litters/as-puppies/Juliet wk4.png", name: "Poppie", age: "4 weeks old" },
   { src: "/past-litters/as-puppies/Moose wk2.png", name: "Moose", age: "2 weeks old" },
   { src: "/past-litters/as-puppies/Romeo wk3.png", name: "Romeo", age: "3 weeks old" },
   // { src: "/past-litters/as-puppies/Rose wk3.png", name: "Rose", age: "3 weeks old" },

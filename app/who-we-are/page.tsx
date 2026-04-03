@@ -15,8 +15,15 @@ export default function WhoWeArePage() {
             At Poodle & Co., we're passionate dog lovers devoted to raising well-bred, family-raised puppies with health and heart in mind.
           </p>
 
-          <div className="relative aspect-[16/9] rounded-2xl overflow-hidden mb-16">
-            <Image src="/family-with-poodles-in-beautiful-home-setting.jpg" alt="Our family" fill className="object-cover" />
+          <div className="relative aspect-[16/9] rounded-2xl overflow-hidden mb-16 shadow-sm ring-1 ring-black/5">
+            <Image
+              src="/carousel-images/winnie_new_fam.jpg"
+              alt="Winnie, a Poodle & Co. puppy, at home with her new family"
+              fill
+              className="object-cover object-center"
+              sizes="(max-width: 896px) 100vw, 896px"
+              priority
+            />
           </div>
 
           <div className="prose prose-lg max-w-none mb-16">
@@ -76,6 +83,7 @@ export default function WhoWeArePage() {
             </div>
           </div>
 
+          {/*
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="relative aspect-square rounded-xl overflow-hidden">
               <Image src="/breeder-with-poodle-puppies.jpg" alt="Our team member" fill className="object-cover" />
@@ -84,6 +92,7 @@ export default function WhoWeArePage() {
               <Image src="/poodles-playing-in-garden.jpg" alt="Our facility" fill className="object-cover" />
             </div>
           </div>
+          */}
         </div>
       </div>
 

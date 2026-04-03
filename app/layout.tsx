@@ -21,6 +21,7 @@ export const metadata: Metadata = {
   title: "Poodle & Co. - Ethical Poodle Breeders",
   description: "Compassionate and ethical poodle breeding with a focus on health, temperament, and loving homes.",
   generator: "v0.app",
+  manifest: "/site.webmanifest",
 }
 
 export default function RootLayout({
